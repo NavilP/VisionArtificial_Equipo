@@ -14,7 +14,7 @@
 
 ###
 
-<p align="left">✔️ Miguel Ángel Sánchez Zanjuampa <a href="https://github.com/MikeszIPN">NavilP</a> </p>
+<p align="left">✔️ Miguel Ángel Sánchez Zanjuampa <a href="https://github.com/MikeszIPN">MikeszIPN</a> </p>
 
 ###
 
