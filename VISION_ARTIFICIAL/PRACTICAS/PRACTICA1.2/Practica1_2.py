@@ -61,3 +61,34 @@ cv2.imshow('Imagen en escala de grises', grisesImg)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+"""# Separar las imagenes en 3 canales
+B, G, R = cv2.split(original)
+
+# Convertir cada canal en arreglo
+ArrayR = np.asarray(R)
+ArrayG = np.asarray(G)
+ArrayB = np.asarray(B)
+
+# Hacer las operaciones en cada arreglo para el gris preciso
+for i in np.nditer(ArrayR, op_flags=['readwrite']):
+    i[...] = i[...] * 0.21
+
+for i in np.nditer(ArrayG, op_flags=['readwrite']):
+    i[...] = i[...] * 0.72
+
+for i in np.nditer(ArrayB, op_flags=['readwrite']):
+    i[...] = i[...] * 0.07
+
+# Sumar los 3 canales
+suma1 = cv2.add(R, G)
+suma2 = cv2.add(suma1, B)
+
+# Guardar la imagen sumada y abrirla en 3 canales
+cv2.imwrite(
+    "C:/Users/SZMik/OneDrive/Documentos/Mike/VisualStudio/Fotos/suma2.jpg", suma2)
+gray = cv2.imread('Fotos/suma2.jpg', 1)
+
+# Mostrar la imagen en gris
+cv2.imshow('Imagen gris', gray)"""
