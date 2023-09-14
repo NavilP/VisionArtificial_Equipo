@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Abrir imagen
-ruta = 'c:/5TO_UPIIT/VISION_ARTIFICIAL/PRACTICA1/IMAGES/ldscp.jpg'
+ruta = 'VISION_ARTIFICIAL/IMAGES/ldscp.jpg'
 img = cv2.imread(ruta, 1)
 cv2.imshow('Imagen Original', img)
 
