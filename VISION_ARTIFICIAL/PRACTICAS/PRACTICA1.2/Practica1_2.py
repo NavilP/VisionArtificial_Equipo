@@ -4,6 +4,16 @@
     Equipo:
     Miguel Angel Sanchez Zanjuampa
     Navil Pineda Rugerio
+    
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    No le haga caso a este archivo profe jaja
+    
+    El otro (.ipynb) es el bueno jeje 
 """
 
 # Librerias
