@@ -1,8 +1,4 @@
-<h1 align="left">Práctica 1</h1>
-
-###
-
-<p align="left">Programación colectiva en Git y Github</p>
+<h1 align="left">Prácticas</h1>
 
 ###
 
