@@ -89,7 +89,15 @@ def p2(base2):
                 #print("min ",min(lista))
                 
                 base3[y2,x2] = min(lista)
+
+    """for i in range(alto):
+        for j in range(ancho):
+            if base3[i,j] == 0:
+                base3[i,j] = '';"""
+    
     return base3
 
 def componentes(imagen):
-    return p2(p1(imagen))
+    a = bin(imagen)
+    b = p2(p1(a))
+    return b
