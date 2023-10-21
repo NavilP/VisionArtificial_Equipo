@@ -89,7 +89,7 @@ def first_difference(cadena, connect):
                         distance[i] = seven_dis[cadena[i]]
     return distance
 
-# Función que recibe como parámetro una imagen en escala de grises y regresa su borde (como imagen) y lista de direcciones con conectividad 8
+
 # Función que recibe como parámetro una imagen en escala de grises y regresa su borde (como imagen) y lista de direcciones con conectividad 8
 def MooreFree8(circle):
     
@@ -109,9 +109,15 @@ def MooreFree8(circle):
     # Obtener dimensiones de la imagen
     dimensiones = test1.shape
 
+    #print("1", test1.shape)
+    
     # Concatenar con una fila mas
     nfila = np.ones((1,dimensiones[1]))
     test = np.concatenate((test1, nfila))
+    ncolumna = np.ones((dimensiones[0]+1,1))
+    test = np.concatenate((test, ncolumna), axis=1)
+    
+    #print("2", test.shape)
 
     tupla = ()
     # Encontrar el valor inicial
