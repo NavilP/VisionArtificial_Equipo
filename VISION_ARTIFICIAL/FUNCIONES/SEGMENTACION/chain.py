@@ -108,16 +108,12 @@ def MooreFree8(circle):
     ###################################### Punto de inicio y punto final #####################
     # Obtener dimensiones de la imagen
     dimensiones = test1.shape
-
-    #print("1", test1.shape)
     
     # Concatenar con una fila mas
     nfila = np.ones((1,dimensiones[1]))
     test = np.concatenate((test1, nfila))
     ncolumna = np.ones((dimensiones[0]+1,1))
     test = np.concatenate((test, ncolumna), axis=1)
-    
-    #print("2", test.shape)
 
     tupla = ()
     # Encontrar el valor inicial
@@ -763,6 +759,8 @@ def MooreFree4(circle):
     # Concatenar con una fila mas
     nfila = np.ones((1,dimensiones[1]))
     test = np.concatenate((test1, nfila))
+    ncolumna = np.ones((dimensiones[0]+1,1))
+    test = np.concatenate((test, ncolumna), axis=1)
 
     tupla = ()
     # Encontrar el valor inicial
