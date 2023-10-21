@@ -16,3 +16,16 @@ def glob(img,valor):
                 base[i][j] = 1
     
     return base
+
+def global_thresholding(img, umbral):
+    wid, hght = img.shape
+    newImage = np.empty((wid,hght))
+    
+    for i in range(wid):
+        for j in range(hght):
+            if img[i,j] > umbral:
+                newImage[i][j] = 0
+            else:
+                newImage[i][j] = 255
+            
+    return newImage
