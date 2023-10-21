@@ -1043,8 +1043,8 @@ def MooreFree4(circle):
     
     print("Hola",base4.shape)
     
-    base4 = np.delete(base4, base8.shape[0]-1, axis=0)
-    base4 = np.delete(base4, base8.shape[1]-1, axis=1)
+    base4 = np.delete(base4, base4.shape[0]-1, axis=0)
+    base4 = np.delete(base4, base4.shape[1]-1, axis=1)
     
     print("Adios", base4.shape)
     
