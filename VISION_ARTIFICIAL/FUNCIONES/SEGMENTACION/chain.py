@@ -735,6 +735,13 @@ def MooreFree8(circle):
                 funcion8 = 3
                 continue
             
+    print("Hola",base8.shape)
+    
+    base8 = np.delete(base8, base8.shape[0]-1, axis=0)
+    base8 = np.delete(base8, base8.shape[1]-1, axis=1)
+    
+    print("Adios", base8.shape)
+            
     return base8, direcciones8
 
 # Funcion que recibe una imagen en escala de grises y regresa una imagen de su borde y la lista de direcciones en conectividad 4
