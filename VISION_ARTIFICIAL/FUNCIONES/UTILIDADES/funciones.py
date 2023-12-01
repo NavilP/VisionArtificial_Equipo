@@ -47,3 +47,14 @@ def suavizado(img):
     gaussiano2 = gaussiano2*255/maxs
     gaussiano2 = gaussiano2.astype(np.uint8)
     return gaussiano2
+
+def superponer(imagen1, imagen2, color):
+    wid, hght, channel = imagen2.shape
+    
+    newImage = np.copy(imagen2)
+
+    for i in range(wid):
+        for j in range(hght):
+            if imagen1[i,j,0] == color[0] and imagen1[i,j,1] == color[1] and imagen1[i,j,2] == color[2]:
+                newImage[i,j,:] = color
+    return newImage
