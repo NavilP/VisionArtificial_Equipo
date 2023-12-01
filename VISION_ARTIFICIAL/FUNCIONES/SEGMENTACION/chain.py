@@ -89,7 +89,7 @@ def first_difference(cadena, connect):
                         distance[i] = seven_dis[cadena[i]]
     return distance
 
-# Función que recibe como parámetro una imagen en escala de grises y regresa su borde (como imagen) y lista de direcciones con conectividad 8
+
 # Función que recibe como parámetro una imagen en escala de grises y regresa su borde (como imagen) y lista de direcciones con conectividad 8
 def MooreFree8(circle):
     
@@ -108,10 +108,12 @@ def MooreFree8(circle):
     ###################################### Punto de inicio y punto final #####################
     # Obtener dimensiones de la imagen
     dimensiones = test1.shape
-
+    
     # Concatenar con una fila mas
     nfila = np.ones((1,dimensiones[1]))
     test = np.concatenate((test1, nfila))
+    ncolumna = np.ones((dimensiones[0]+1,1))
+    test = np.concatenate((test, ncolumna), axis=1)
 
     tupla = ()
     # Encontrar el valor inicial
@@ -732,6 +734,9 @@ def MooreFree8(circle):
                 #print(val)
                 funcion8 = 3
                 continue
+    
+    base8 = np.delete(base8, base8.shape[0]-1, axis=0)
+    base8 = np.delete(base8, base8.shape[1]-1, axis=1)
             
     return base8, direcciones8
 
@@ -757,6 +762,8 @@ def MooreFree4(circle):
     # Concatenar con una fila mas
     nfila = np.ones((1,dimensiones[1]))
     test = np.concatenate((test1, nfila))
+    ncolumna = np.ones((dimensiones[0]+1,1))
+    test = np.concatenate((test, ncolumna), axis=1)
 
     tupla = ()
     # Encontrar el valor inicial
@@ -1029,5 +1036,8 @@ def MooreFree4(circle):
                 #print(val)
                 funcion4 = 1
                 continue
+    
+    base4 = np.delete(base4, base4.shape[0]-1, axis=0)
+    base4 = np.delete(base4, base4.shape[1]-1, axis=1)
     
     return base4, direcciones4 
